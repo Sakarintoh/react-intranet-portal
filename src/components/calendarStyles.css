@@ -1,0 +1,77 @@
+/* ปรับขนาดของปฏิทิน */
+.react-calendar {
+  width: 100%;
+  height: 320px; /* ปรับความสูงให้เหมาะสมกับขนาดของปฏิทิน */
+  max-width: 400px; /* ปรับขนาดให้เหมาะสม */
+  margin: 0 auto; /* จัดกึ่งกลาง */
+  border-radius: 15px; /* ขอบโค้งมน */
+  box-shadow: 0px 4px 8px rgba(162, 100, 100, 0.1); /* เงา */
+  padding: 10px;
+  background-color: #ffffff;
+  overflow: hidden; /* หลีกเลี่ยงการขยายเกินขอบ */
+}
+
+/* ปรับปรุงการแสดงผลวันที่ที่ไม่ใช่เดือนปัจจุบัน */
+.react-calendar__tile--off {
+  background-color: #f0f0f0;
+  color: #b0b0b0;
+}
+
+/* ปรับปรุงสไตล์ของเดือนในปีที่เลือก */
+.react-calendar__month-view__days__day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px; /* เพิ่มความสูงให้พอดี */
+}
+
+/* ปรับปรุงสไตล์ของปฏิทินในแง่ของปุ่มเปลี่ยนเดือน */
+.react-calendar__navigation button {
+  background-color: #102C57;
+  border-radius: 60%;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px;
+  color: #F8F0E5;
+}
+
+/* เพิ่มสีให้กับปฏิทินเมื่อมีเหตุการณ์ */
+.react-calendar__tile.highlight {
+  background-color: #F8F0E5; /* สีพื้นหลังของวันที่มีเหตุการณ์ */
+  color: #102C57; /* สีตัวอักษร */
+}
+
+/* ปรับปรุงการแสดงผลของวันในแต่ละเดือน */
+.react-calendar__tile {
+  font-size: 0.9rem; /* ลดขนาดตัวอักษรให้พอดีกับขนาดของปฏิทิน */
+  color: #333; /* สีของตัวอักษร */
+  padding: 10px; /* ขนาดของวัน */
+  border-radius: 8px; /* ขอบโค้งมน */
+  transition: background-color 0.2s ease; /* เอฟเฟ็กต์การเปลี่ยนสี */
+  height: 35px; /* เพิ่มความสูงของ tile */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* จัดให้วันที่อยู่กลาง */
+}
+
+/* เอฟเฟ็กต์เมื่อเอาเมาส์ไปวางบนวันที่ */
+.react-calendar__tile:hover {
+  background-color: #e0e0e0; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวาง */
+  cursor: pointer;
+}
+
+/* ปรับสไตล์ของวันนี้ (ปัจจุบัน) */
+.react-calendar__tile--now {
+  background-color: #102C57; /* สีพื้นหลังของวันที่ปัจจุบัน */
+  color: white; /* สีของตัวอักษร */
+  font-weight: bold;
+}
+
+/* ปรับการแสดงผลของแถบ Navigation (ปุ่มเดือน) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
